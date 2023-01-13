@@ -1,5 +1,5 @@
-let divQuestion=document.getElementById("questions")
+// let divQuestion=document.getElementById("questions")
 
 
 
-divQuestion.classList.remove("hide")
+// divQuestion.classList.remove("hide")
