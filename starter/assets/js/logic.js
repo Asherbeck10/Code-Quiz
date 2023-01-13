@@ -1,5 +1,10 @@
-// let divQuestion=document.getElementById("questions")
+let divQuestion=document.getElementById("questions")
+divQuestion.classList.remove("hide")
+let x="<script>"
+let rightAnswer=window[questionsArray[0]]()
 
-
-
-// divQuestion.classList.remove("hide")
+//let rightAnswer=window[questionsArray[9]]()
+if (x===rightAnswer) {
+    console.log("well done")
+    
+}

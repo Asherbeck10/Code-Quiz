@@ -1,8 +1,8 @@
-let divQuestion=document.getElementById("questions")
+// let divQuestion=document.getElementById("questions")
 
 
 
-divQuestion.classList.remove("hide")
+// divQuestion.classList.remove("hide")
 
 
 let questionTitle=document.getElementById("question-title");
@@ -14,92 +14,105 @@ for (let i = 0; i < 4; i++) {
     questionChoices.appendChild(questionBtn);;
     
 };
-
-    
-let questions={
 //question 1/10
-questionOne: function(){
-questionTitle.textContent="Inside which HTML Element do we put the JavaScript?";
-questionChoices.children[0].textContent="<script>";
-questionChoices.children[1].textContent="<scripting>";
-questionChoices.children[2].textContent="<javascript>";
-questionChoices.children[3].textContent="<js>";},
+function questionOne(){
+    questionTitle.textContent="Inside which HTML Element do we put the JavaScript?";
+    questionChoices.children[0].textContent="<script>";
+    questionChoices.children[1].textContent="<scripting>";
+    questionChoices.children[2].textContent="<javascript>";
+    questionChoices.children[3].textContent="<js>";
+return "<script>"};
 
-
-//question 2/10
-questionTwo:function(){
-questionTitle.textContent="Where is the correct place to insert a JavaScript?"
-questionChoices.children[0].textContent="The <head> section";
-questionChoices.children[1].textContent="The <body> section";
-questionChoices.children[2].textContent="All are correct>";
-questionChoices.children[3].textContent="";},
-
+    //question 2/10
+function questionTwo(){
+    questionTitle.textContent="Where is the correct place to insert a JavaScript?"
+    questionChoices.children[0].textContent="The <head> section";
+    questionChoices.children[1].textContent="The <body> section";
+    questionChoices.children[2].textContent="The <header> section";
+    questionChoices.children[3].textContent="Both <head> and <body> section";};
 
 //question 3/10
-questionThree:function(){
-questionTitle.textContent="What is the correct syntax for referring to an external script called xxx.js?";
-questionChoices.children[0].textContent="<script name=\"xxx.js\'>";
-questionChoices.children[1].textContent="<scrip href=\"xxx.js\">";
-questionChoices.children[2].textContent="<script src=\"xxx.js\">";
-questionChoices.children[3].textContent="";},
-
+function questionThree(){
+        questionTitle.textContent="What is the correct syntax for referring to an external script called xxx.js?";
+        questionChoices.children[0].textContent="<script name=\"xxx.js\'>";
+        questionChoices.children[1].textContent="<scrip href=\"xxx.js\">";
+        questionChoices.children[2].textContent="<script src=\"xxx.js\">";
+        questionChoices.children[3].textContent="All is correct";}
 
 //question 4/10
-questionFour:function(){
-questionTitle.textContent="How do you create a function in JavaScript?";
-questionChoices.children[0].textContent="function:myFunction()";
-questionChoices.children[1].textContent="function=myFunction()";
-questionChoices.children[2].textContent="function myFunction()";
-questionChoices.children[3].textContent="";},
-
+function questionFour(){
+    questionTitle.textContent="How do you create a function in JavaScript?";
+    questionChoices.children[0].textContent="function:myFunction()";
+    questionChoices.children[1].textContent="function=myFunction()";
+    questionChoices.children[2].textContent="function myFunction()";
+    questionChoices.children[3].textContent="all is correct";};
 
 //question 5/10
-questionFive:function(){
-questionTitle.textContent="How do you call a function named myFunction";
-questionChoices.children[0].textContent="myFunction()";
-questionChoices.children[1].textContent="call function myFunction()";
-questionChoices.children[2].textContent="call myFunction()";
-questionChoices.children[3].textContent="";},
+function questionFive(){
+    questionTitle.textContent="How do you call a function named myFunction";
+    questionChoices.children[0].textContent="myFunction()";
+    questionChoices.children[1].textContent="call function myFunction()";
+    questionChoices.children[2].textContent="call myFunction()";
+    questionChoices.children[3].textContent="All is correct";}
+    
+    //question 6/10
+  function questionSix(){
+    questionTitle.textContent="How to write an IF statement in JavaScript?";
+    questionChoices.children[0].textContent="if i=5";
+    questionChoices.children[1].textContent="if i==5 then";
+    questionChoices.children[2].textContent="if i=5 then";
+    questionChoices.children[3].textContent="if(i==5)";};
+    
+    //question 7/10
+    function questionSeven(){
+    questionTitle.textContent="How to write an IF statement for executing some code if \"i\" in not equal to 5?";
+    questionChoices.children[0].textContent="if(i<>5)";
+    questionChoices.children[1].textContent="if i<>5";;
+    questionChoices.children[2].textContent="if(i!=5)";
+    questionChoices.children[3].textContent="if i=!5 then";};
+    
+    //question 8/10
+    function questionEight(){
+    questionTitle.textContent="How does a FOR loop start";
+    questionChoices.children[0].textContent="for(i=0;i<=5;i++}";
+    questionChoices.children[1].textContent="for i-1 to 5";
+    questionChoices.children[2].textContent="for(i=0;i<=5)";
+    questionChoices.children[3].textContent="for(i<=5;i++)";};
+    
+    //question 9/10
+   function  questionNine(){
+    questionTitle.textContent="How can you add a comment in a JavaScript?";
+    questionChoices.children[0].textContent="//This is a comment";
+    questionChoices.children[1].textContent="'This is a comment";
+    questionChoices.children[2].textContent="<!--This is a comment-->";
+    questionChoices.children[3].textContent="All is correct";}
+    
+    //question 10/10
+    function questionTen(){
+    questionTitle.textContent="How do you declare a JavaScript variable?";
+    questionChoices.children[0].textContent="let myName;";
+    questionChoices.children[1].textContent="variable myName;";
+    questionChoices.children[2].textContent="v myName;";
+    questionChoices.children[3].textContent="All is correct";}
 
-//question 6/10
-questionSix:function(){
-questionTitle.textContent="How to write an IF statement in JavaScript?";
-questionChoices.children[0].textContent="if i=5";
-questionChoices.children[1].textContent="if i==5 then";
-questionChoices.children[2].textContent="if i=5 then";
-questionChoices.children[3].textContent="if(i==5)";},
+    
+    
+     
+let questions={
 
-//question 7/10
-questionSeven:function(){
-questionTitle.textContent="How to write an IF statement for executing some code if \"i\" in not equal to 5?";
-questionChoices.children[0].textContent="if(i<>5)";
-questionChoices.children[1].textContent="if i<>5";;
-questionChoices.children[2].textContent="if(i!=5)";
-questionChoices.children[3].textContent="if i=!5 then";},
+questionOne:questionOne,questionTwo:questionTwo,questionThree:questionThree,questionFour:questionFour,questionFive:questionFive,questionSix:questionSix,questionSeven:questionSeven,questionEight:questionEight,questionNine:questionNine,questionTen:questionTen
+};
 
-//question 8/10
-questionEight:function(){
-questionTitle.textContent="How does a FOR loop start";
-questionChoices.children[0].textContent="for(i=0;i<=5;i++}";
-questionChoices.children[1].textContent="for i-1 to 5";
-questionChoices.children[2].textContent="for(i=0;i<=5)";
-questionChoices.children[3].textContent="for(i<=5;i++)";},
 
-//question 9/10
-questionNine:function(){
-questionTitle.textContent="How can you add a comment in a JavaScript?";
-questionChoices.children[0].textContent="//This is a comment";
-questionChoices.children[1].textContent="'This is a comment";
-questionChoices.children[2].textContent="<!--This is a comment-->";
-questionChoices.children[3].textContent="";},
+let questionsArray=Object.keys(questions);
 
-//question 10/10
-questionTen:function(){
-questionTitle.textContent="How do you declare a JavaScript variable?";
-questionChoices.children[0].textContent="let myName;";
-questionChoices.children[1].textContent="variable myName;";
-questionChoices.children[2].textContent="v myName;";
-questionChoices.children[3].textContent="";}
 
-}
+
+
+
+
+
+
+
+
 
