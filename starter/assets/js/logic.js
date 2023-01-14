@@ -2,6 +2,18 @@ let divQuestion = document.getElementById("questions")
 let questionTitle = document.getElementById("question-title");
 let questionChoices = document.getElementById("choices");
 let questionBtn = document.createElement("button");
+let endScreen=document.getElementById("end-screen")
+let startBtn=document.getElementById("start");
+let startScreen=document.getElementById("start-screen");
+
+//stat of quiz
+startBtn.addEventListener("click", function (event) {
+
+    if (event.target.matches("button")) {
+        divQuestion.classList.replace("hide","active");
+        startScreen.classList.add("hide");
+    }})
+
 
 //adding question button amd attribute
 for (let i = 0; i < 4; i++) {
@@ -11,7 +23,6 @@ for (let i = 0; i < 4; i++) {
 
 };
 
-divQuestion.classList.remove("hide")
 
 // Array of functions
 let questionsArray = Object.keys(questions);
@@ -47,9 +58,12 @@ questionChoices.addEventListener("click", function (event) {
         console.log("wrong")
     }
     if (currentQuestion < 9) {
-        currentQuestion++
-        rightAnswer = rendering()
+        currentQuestion++;
+        rightAnswer = rendering();
         
+    }else{
+         divQuestion.classList.replace("active","hide");
+         endScreen.classList.replace("hide","active")   //and quiz
     }
 
 

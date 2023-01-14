@@ -1,19 +1,4 @@
-// let divQuestion=document.getElementById("questions")
 
-
-
-// divQuestion.classList.remove("hide")
-
-
-// let questionTitle=document.getElementById("question-title");
-// let questionChoices=document.getElementById("choices");
-// let questionBtn=document.createElement("button");
-
-// for (let i = 0; i < 4; i++) {
-//     questionBtn=document.createElement("button");                       //adding question button 
-//     questionChoices.appendChild(questionBtn);;
-    
-// };
 //question 1/10
 function questionOne(){
     questionTitle.textContent="Inside which HTML Element do we put the JavaScript?";
