@@ -5,15 +5,15 @@
 // divQuestion.classList.remove("hide")
 
 
-let questionTitle=document.getElementById("question-title");
-let questionChoices=document.getElementById("choices");
-let questionBtn=document.createElement("button");
+// let questionTitle=document.getElementById("question-title");
+// let questionChoices=document.getElementById("choices");
+// let questionBtn=document.createElement("button");
 
-for (let i = 0; i < 4; i++) {
-    questionBtn=document.createElement("button");                       //adding question button 
-    questionChoices.appendChild(questionBtn);;
+// for (let i = 0; i < 4; i++) {
+//     questionBtn=document.createElement("button");                       //adding question button 
+//     questionChoices.appendChild(questionBtn);;
     
-};
+// };
 //question 1/10
 function questionOne(){
     questionTitle.textContent="Inside which HTML Element do we put the JavaScript?";
@@ -29,7 +29,8 @@ function questionTwo(){
     questionChoices.children[0].textContent="The <head> section";
     questionChoices.children[1].textContent="The <body> section";
     questionChoices.children[2].textContent="The <header> section";
-    questionChoices.children[3].textContent="Both <head> and <body> section";};
+    questionChoices.children[3].textContent="Both <head> or <body> section";
+return "Both <head> or <body> section"};
 
 //question 3/10
 function questionThree(){
@@ -93,7 +94,9 @@ function questionFive(){
     questionChoices.children[0].textContent="let myName;";
     questionChoices.children[1].textContent="variable myName;";
     questionChoices.children[2].textContent="v myName;";
-    questionChoices.children[3].textContent="All is correct";}
+    questionChoices.children[3].textContent="All is correct";
+return "let myName;"}
+    
 
     
     
@@ -104,7 +107,7 @@ questionOne:questionOne,questionTwo:questionTwo,questionThree:questionThree,ques
 };
 
 
-let questionsArray=Object.keys(questions);
+
 
 
 
