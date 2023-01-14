@@ -38,7 +38,8 @@ function questionThree(){
         questionChoices.children[0].textContent="<script name=\"xxx.js\'>";
         questionChoices.children[1].textContent="<scrip href=\"xxx.js\">";
         questionChoices.children[2].textContent="<script src=\"xxx.js\">";
-        questionChoices.children[3].textContent="All is correct";}
+        questionChoices.children[3].textContent="All is correct";
+    return "<script src=\"xxx.js\">"};
 
 //question 4/10
 function questionFour(){
@@ -46,7 +47,8 @@ function questionFour(){
     questionChoices.children[0].textContent="function:myFunction()";
     questionChoices.children[1].textContent="function=myFunction()";
     questionChoices.children[2].textContent="function myFunction()";
-    questionChoices.children[3].textContent="all is correct";};
+    questionChoices.children[3].textContent="all is correct";
+return "function myFunction()"};
 
 //question 5/10
 function questionFive(){
@@ -54,7 +56,8 @@ function questionFive(){
     questionChoices.children[0].textContent="myFunction()";
     questionChoices.children[1].textContent="call function myFunction()";
     questionChoices.children[2].textContent="call myFunction()";
-    questionChoices.children[3].textContent="All is correct";}
+    questionChoices.children[3].textContent="All is correct";
+return "myFunction()"};
     
     //question 6/10
   function questionSix(){
@@ -62,7 +65,8 @@ function questionFive(){
     questionChoices.children[0].textContent="if i=5";
     questionChoices.children[1].textContent="if i==5 then";
     questionChoices.children[2].textContent="if i=5 then";
-    questionChoices.children[3].textContent="if(i==5)";};
+    questionChoices.children[3].textContent="if(i==5)";
+return "if(i==5)"};
     
     //question 7/10
     function questionSeven(){
@@ -70,7 +74,8 @@ function questionFive(){
     questionChoices.children[0].textContent="if(i<>5)";
     questionChoices.children[1].textContent="if i<>5";;
     questionChoices.children[2].textContent="if(i!=5)";
-    questionChoices.children[3].textContent="if i=!5 then";};
+    questionChoices.children[3].textContent="if i=!5 then";
+return "if(i!=5)"};
     
     //question 8/10
     function questionEight(){
@@ -78,7 +83,8 @@ function questionFive(){
     questionChoices.children[0].textContent="for(i=0;i<=5;i++}";
     questionChoices.children[1].textContent="for i-1 to 5";
     questionChoices.children[2].textContent="for(i=0;i<=5)";
-    questionChoices.children[3].textContent="for(i<=5;i++)";};
+    questionChoices.children[3].textContent="for(i<=5;i++)";
+return "for(i=0;i<=5;i++}"};
     
     //question 9/10
    function  questionNine(){
@@ -86,7 +92,8 @@ function questionFive(){
     questionChoices.children[0].textContent="//This is a comment";
     questionChoices.children[1].textContent="'This is a comment";
     questionChoices.children[2].textContent="<!--This is a comment-->";
-    questionChoices.children[3].textContent="All is correct";}
+    questionChoices.children[3].textContent="All is correct";
+return "//This is a comment"};
     
     //question 10/10
     function questionTen(){
