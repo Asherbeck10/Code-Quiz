@@ -5,13 +5,17 @@ let questionBtn = document.createElement("button");
 let endScreen=document.getElementById("end-screen")
 let startBtn=document.getElementById("start");
 let startScreen=document.getElementById("start-screen");
-
+let quizTimer=document.getElementById("time")
 //stat of quiz
+let timer=100
+
 startBtn.addEventListener("click", function (event) {
 
     if (event.target.matches("button")) {
         divQuestion.classList.replace("hide","active");
         startScreen.classList.add("hide");
+        timeScore()
+        
     }})
 
 
@@ -28,10 +32,8 @@ for (let i = 0; i < 4; i++) {
 let questionsArray = Object.keys(questions);
 
 let currentQuestion = 0
-function rendering(params) {
-    let rightAnswer = window[questionsArray[currentQuestion]](); //Rendering Answer and questions
-    return rightAnswer
-}
+
+
 
 rendering()
 
@@ -55,22 +57,51 @@ questionChoices.addEventListener("click", function (event) {
         console.log("well done")
 
     } else {
-        console.log("wrong")
+        console.log("wrong");
+       timer-=10 ;
+           
     }
     if (currentQuestion < 9) {
         currentQuestion++;
         rightAnswer = rendering();
-        
+        //end of quiz
     }else{
-         divQuestion.classList.replace("active","hide");
-         endScreen.classList.replace("hide","active")   //and quiz
+       endOfQuiz() 
+          
     }
 
 
 });
+//rendering Answer and questions function
+function rendering(params) {
+    let rightAnswer = window[questionsArray[currentQuestion]](); 
+    return rightAnswer
+}
+//end of quiz function
+function endOfQuiz(params) {
+    divQuestion.classList.replace("active","hide");
+    endScreen.classList.replace("hide","active");   
+    clearInterval(intervalId)
+}
 
+// timer function
+let intervalId=0
+function timeScore(params) {
+    intervalId=setInterval(function(){
+        timer--
+        quizTimer.innerHTML=timer
+        if (timer<=0) {
+            
+            endOfQuiz()
+           
+            
+        }
+        
 
-
+    },1000)
+    
+   
+}
 
 
 
