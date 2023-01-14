@@ -16,16 +16,18 @@ divQuestion.classList.remove("hide")
 // Array of functions
 let questionsArray=Object.keys(questions);
 
-let i=0
+
 
 
 for (let i = 0; i < questionsArray.length; i++) {
-    let rightAnswer=window[questionsArray[i]]();
-    questionChoices.addEventListener("click",function(event){
+        let rightAnswer=window[questionsArray[i]]();
+        questionChoices.addEventListener("click",function(event){
         if (event.target.matches("button")) {
             let buttonIndex = event.target.getAttribute("data-index");
-            let=userAnswer=questionChoices.children[buttonIndex].textContent
+            userAnswer=questionChoices.children[buttonIndex].textContent
+            console.log(userAnswer)
              }
+            
         if (rightAnswer===userAnswer) {
             console.log("well done")
         }else{
@@ -38,11 +40,3 @@ for (let i = 0; i < questionsArray.length; i++) {
 
 
 
-function answers()
-{let userAnswer = event.target.getAttribute("data-index")
-    console.log(userAnswer)
-    console.log(rightAnswer)
-     if (userAnswer===rightAnswer) {
-    console.log("well done") 
-     }else{console.log("wrong answer")};
-    }
