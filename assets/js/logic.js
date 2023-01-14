@@ -6,6 +6,7 @@ let endScreen=document.getElementById("end-screen")
 let startBtn=document.getElementById("start");
 let startScreen=document.getElementById("start-screen");
 let quizTimer=document.getElementById("time")
+let finalScore=document.getElementById("final-score")
 //stat of quiz
 let timer=100
 
@@ -90,6 +91,7 @@ function timeScore(params) {
     intervalId=setInterval(function(){
         timer--
         quizTimer.innerHTML=timer
+        finalScore.innerHTML=timer
         if (timer<=0) {
             
             endOfQuiz()
@@ -102,6 +104,7 @@ function timeScore(params) {
     
    
 }
+
 
 
 
