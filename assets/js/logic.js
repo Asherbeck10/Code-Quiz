@@ -134,14 +134,18 @@ submit.addEventListener("click", function(event) {
   
     // Add new todoText to initial array, clear the input
     submitScore.push(initialText);
-    console.log(submitScore);
+    console.log(submitScore)
     
     highScore=JSON.parse(localStorage.getItem("scores"))
-    if (highScore[0]<submitScore[0]) {
-        localStorage.setItem("scores", JSON.stringify(submitScore));
-
+    if (highScore[0]===null) {
+        localStorage.setItem("scores", JSON.stringify([0,0]));
+ 
+          
+    }if (highScore[0]<submitScore[0]) {
+        localStorage.setItem("scores", JSON.stringify(submitScore));  
+    } 
         
-    }
+    
     
     initial.value = "";
     finalScore.textContent="";
