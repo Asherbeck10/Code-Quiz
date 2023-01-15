@@ -133,6 +133,7 @@ submit.addEventListener("click", function(event) {
     submitScore.push(initialText);
     initial.value = "";
     finalScore.textContent="";
+    window.location =("highscores.html")
   
    
   });
