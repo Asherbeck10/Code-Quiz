@@ -1,3 +1,4 @@
+//DOM variables
 let divQuestion = document.getElementById("questions")
 let questionTitle = document.getElementById("question-title");
 let questionChoices = document.getElementById("choices");
@@ -7,6 +8,12 @@ let startBtn=document.getElementById("start");
 let startScreen=document.getElementById("start-screen");
 let quizTimer=document.getElementById("time")
 let finalScore=document.getElementById("final-score")
+let submit=document.getElementById("submit")
+let initial=document.getElementById("initials")
+//let p=document.createElement("p")
+
+
+
 //stat of quiz
 let timer=100
 
@@ -16,6 +23,7 @@ startBtn.addEventListener("click", function (event) {
         divQuestion.classList.replace("hide","active");
         startScreen.classList.add("hide");
         timeScore()
+        
         
     }})
 
@@ -28,6 +36,7 @@ for (let i = 0; i < 4; i++) {
 
 };
 
+//let message=questionChoices.appendChild(p)
 
 // Array of functions
 let questionsArray = Object.keys(questions);
@@ -44,27 +53,29 @@ questionChoices.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         let buttonIndex = event.target.getAttribute("data-index");
         userAnswer = questionChoices.children[buttonIndex].textContent; 
-        console.log(userAnswer);
+        //console.log(userAnswer);
     }
    
  //answer check
     {
         rightAnswer = rendering()
 
-        console.log(currentQuestion)
+       
 
     } if (rightAnswer === userAnswer) {
-
-        console.log("well done")
+       // message.textContent="correct";
 
     } else {
-        console.log("wrong");
+       // message.textContent="wrong";
        timer-=10 ;
            
     }
+    
     if (currentQuestion < 9) {
         currentQuestion++;
+        ;
         rightAnswer = rendering();
+
         //end of quiz
     }else{
        endOfQuiz() 
@@ -92,6 +103,7 @@ function timeScore(params) {
         timer--
         quizTimer.innerHTML=timer
         finalScore.innerHTML=timer
+        submitScore.splice(0,1,timer)
         if (timer<=0) {
             
             endOfQuiz()
@@ -105,6 +117,25 @@ function timeScore(params) {
    
 }
 
+//submitting score and initials
+let submitScore=[]
+submit.addEventListener("click", function(event) {
+    event.preventDefault();
+  console.log("submit")
+    let initialText = initial.value.trim();
+  
+    // Return from function early if submitted todoText is blank
+    if (initialText === "") {
+      return;
+    }
+  
+    // Add new todoText to initial array, clear the input
+    submitScore.push(initialText);
+    initial.value = "";
+    finalScore.textContent="";
+  
+   
+  });
 
 
 
