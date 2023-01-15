@@ -138,18 +138,19 @@ submit.addEventListener("click", function(event) {
     
     highScore=JSON.parse(localStorage.getItem("scores"))
     if (highScore[0]===undefined) {
-        localStorage.setItem("scores", JSON.stringify([0,A]));
+        localStorage.setItem("scores", JSON.stringify([0,"AA"]));
  
           
-    }if (highScore[0]<submitScore[0]) {
+    }else if
+     (highScore[0]<submitScore[0]) {
         localStorage.setItem("scores", JSON.stringify(submitScore));  
-    } 
+    } else{
         
     
     
     initial.value = "";
     finalScore.textContent="";
-    window.location =("highscores.html")
+    window.location =("highscores.html")}
   
    
   });
