@@ -53,7 +53,7 @@ questionChoices.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         let buttonIndex = event.target.getAttribute("data-index");
         userAnswer = questionChoices.children[buttonIndex].textContent; 
-        //console.log(userAnswer);
+        
     }
    
  //answer check
@@ -117,26 +117,7 @@ function timeScore(params) {
    
 }
 
-//submitting score and initials
-let submitScore=[]
-submit.addEventListener("click", function(event) {
-    event.preventDefault();
-  console.log("submit")
-    let initialText = initial.value.trim();
-  
-    // Return from function early if submitted todoText is blank
-    if (initialText === "") {
-      return;
-    }
-  
-    // Add new todoText to initial array, clear the input
-    submitScore.push(initialText);
-    initial.value = "";
-    finalScore.textContent="";
-    window.location =("highscores.html")
-  
-   
-  });
+
 
 
 
