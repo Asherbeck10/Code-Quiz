@@ -45,6 +45,7 @@ let currentQuestion = 0
 
 
 
+
 rendering()
 
 //lister  
@@ -136,24 +137,20 @@ submit.addEventListener("click", function(event) {
     submitScore.push(initialText);
     console.log(submitScore)
     
-    highScore=JSON.parse(localStorage.getItem("scores"))
-    if (highScore[0]===undefined) {
-        localStorage.setItem("scores", JSON.stringify([0,"AA"]));
- 
-          
-    }else if
-     (highScore[0]<submitScore[0]) {
-        localStorage.setItem("scores", JSON.stringify(submitScore));  
-    } else{
-        
+    highScore=JSON.parse(localStorage.getItem("scores"))|| [0,"AA"]
+    if(highScore[0]<submitScore[0]) {
+           localStorage.setItem("scores", JSON.stringify(submitScore));  
+              } 
+    window.location =("highscores.html")         
     
-    
-    initial.value = "";
-    finalScore.textContent="";
-    window.location =("highscores.html")}
   
-   
-  });
+ });
 
 
+//  if (highScore[0]===undefined) {
+//     localStorage.setItem("scores", JSON.stringify([0,"AA"]));
 
+      
+//  }else if(highScore[0]<submitScore[0]) {
+//     localStorage.setItem("scores", JSON.stringify(submitScore));  
+//       } else{window.location =("highscores.html")}                  

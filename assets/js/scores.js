@@ -11,6 +11,7 @@ clearHighScoreBtn.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         localStorage.setItem("scores", JSON.stringify([0, "AA"]));
         highScores.textContent=""
+        
     
     }
    
