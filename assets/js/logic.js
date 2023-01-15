@@ -137,8 +137,8 @@ submit.addEventListener("click", function(event) {
     console.log(submitScore)
     
     highScore=JSON.parse(localStorage.getItem("scores"))
-    if (highScore[0]===null) {
-        localStorage.setItem("scores", JSON.stringify([0,0]));
+    if (highScore[0]===undefined) {
+        localStorage.setItem("scores", JSON.stringify([0,A]));
  
           
     }if (highScore[0]<submitScore[0]) {
