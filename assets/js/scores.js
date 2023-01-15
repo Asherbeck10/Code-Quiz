@@ -1,33 +1,19 @@
-//##submitting score and initials##
 
-let submitScore=[]
-let highScore=[]
+//creating li element
+let storedScore = JSON.parse(localStorage.getItem("scores"));
+let highScorer = document.getElementById("highscores");
+let liElement = document.createElement("li");
+let highScores = highScorer.appendChild(liElement);
+highScores.textContent = storedScore[1] + "-" + storedScore[0];
 
-submit.addEventListener("click", function(event) {
-    event.preventDefault();
-
-    let initialText = initial.value.trim();
-  
-    // Return from function early if submitted todoText is blank
-    if (initialText === "") {
-      return;
-    }
-  
-    // Add new todoText to initial array, clear the input
-    submitScore.push(initialText);
-    console.log(submitScore)
-    highScore=JSON.parse(localStorage.getItem("scores"))
-    if (highScore[0]<submitScore[0]) {
-        localStorage.setItem("scores", JSON.stringify(submitScore));
-
-        
-    }
+let clearHighScoreBtn = document.getElementById("clear");
+clearHighScoreBtn.addEventListener("click", function (event) {
+    if (event.target.matches("button")) {
+        localStorage.setItem("scores", JSON.stringify([0, "AA"]));
+        highScores.textContent=""
     
-    initial.value = "";
-    finalScore.textContent="";
-    window.location =("highscores.html")
-  
+    }
    
-  });
 
 
+})
