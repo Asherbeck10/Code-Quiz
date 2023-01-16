@@ -65,10 +65,9 @@ questionChoices.addEventListener("click", function (event) {
 
 
     } if (rightAnswer === userAnswer) {
-        // message.textContent="correct";
-
+        
     } else {
-        // message.textContent="wrong";
+        
         timer -= 10;
 
     }
@@ -86,11 +85,13 @@ questionChoices.addEventListener("click", function (event) {
 
 
 });
+
 //rendering Answer and questions function
 function rendering(params) {
     let rightAnswer = window[questionsArray[currentQuestion]]();
     return rightAnswer
 }
+
 //end of quiz function
 function endOfQuiz(params) {
     divQuestion.classList.replace("active", "hide");
@@ -138,7 +139,7 @@ submit.addEventListener("click", function (event) {
     submitScore.push(initialText);
     
 
-    highScore = JSON.parse(localStorage.getItem("scores")) || [0, "AA"]
+    highScore = JSON.parse(localStorage.getItem("scores")) || [0, "AA"];
     if (highScore[0] < submitScore[0]) {
         localStorage.setItem("scores", JSON.stringify(submitScore));
     }

@@ -1,6 +1,6 @@
 
 //creating li element
-let storedScore = JSON.parse(localStorage.getItem("scores"));
+let storedScore = JSON.parse(localStorage.getItem("scores")) || [0, "AA"];
 let highScorer = document.getElementById("highscores");
 let liElement = document.createElement("li");
 let highScores = highScorer.appendChild(liElement);
