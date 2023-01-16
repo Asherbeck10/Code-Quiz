@@ -32,7 +32,7 @@ This app  run in the browser, feature dynamically updated HTML (DOM),JSON and CS
 <!-- USAGE EXAMPLES -->
 ## Usage
 1. Click on the "start Quiz" button  in the start page it will take you to the multiple-choice view.
-![multiple-choice screen](./assets/photos/multiple-choice%20screen%5D.png)
+![multiple-choice screen](./assets/photos/multiple-choice%20screen.png)
 2. choose one of the four answers by clicking on the answer button.a timer will run at the right upper corner.
 3. When answer is clicked, the next question appears.
 4. If the answer clicked was incorrect then subtract time from the clock.
@@ -40,7 +40,8 @@ This app  run in the browser, feature dynamically updated HTML (DOM),JSON and CS
 6. When the game ends, it would display their score and give the user the ability to save their initials and their score.
 <br>
 ![initials screen](./assets/photos/Score_initials_screen.png)
-7. You can see the  high score on the "highscores" page. 
+7. You can see the  high score on the "highscores" page.
+<br> 
 ![highscores screen](./assets/photos/highscores.png)
 
 
