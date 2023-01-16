@@ -38,6 +38,7 @@ This app  run in the browser, feature dynamically updated HTML (DOM),JSON and CS
 4. If the answer clicked was incorrect then subtract time from the clock.
 5. The quiz ends when all questions are answered or the timer reaches 0.
 6. When the game ends, it would display their score and give the user the ability to save their initials and their score.
+<br>
 ![initials screen](./assets/photos/Score_initials_screen.png)
 7. You can see the  high score on the "highscores" page. 
 ![highscores screen](./assets/photos/highscores.png)
